@@ -1,5 +1,5 @@
 {% set name = "pgcolorbar" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pgcolorbar-{{ version }}.zip
-  sha256: da8bac77a6da780389d2c9bb8d553628766d771778a3009c7b13598f4a58d2c7
+  sha256: 4cfc9e389362564425935d98d14833a4c3f3f32fc60ce6398a37166b0e6d203d
 
 build:
   number: 0
