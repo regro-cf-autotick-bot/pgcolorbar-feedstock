@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pgcolorbar-{{ version }}.zip
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pgcolorbar-{{ version }}.zip
   sha256: f7856e1e6865615db768b843ce8aea7259218143badf8ae5a54867219057da70
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pgcolorbar_demo = pgcolorbar.demo:main
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
     - pyqtgraph >=0.10.0
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -33,6 +33,7 @@ test:
   requires:
     - pip
     - pyqt >=5.12
+    - python {{ python_min }}
 
 about:
   home: https://github.com/titusjan/pgcolorbar
